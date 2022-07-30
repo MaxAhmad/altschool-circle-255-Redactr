@@ -12,23 +12,38 @@
 
 <body>
   <div class="container">
-    <h1>Redactr!!</h1>
-    <input type="text" class="scrambleText">
-    <br>
-    <textarea name="" id="" class="mainText" cols="30" rows="10"></textarea>
-    <br>
-    <h4> Select the symbol for hiding your content </h4>
-    <input type="checkbox" name="" id="check1" class="check" value="*" onclick="return ValidateSelection();">*  
-    <input type="checkbox" name="" id="check2" class="check" value="#" onclick="return ValidateSelection();"># 
-    <input type="checkbox" name="" id="check3" class="check" value="%" onclick="return ValidateSelection();">%
-    <br>
-    <button type="submit" class="btn" > RedactR Now</button>
-
-    <p class="para">change this text</p>
-
-    <p class="totalWords">change this text</p>
-
-    <p class="totalWords">change this text</p>
+    <h1>Redactr</h1>
+    <form class="form">
+      <div class="form-group">
+        <textarea name="" id="" class="mainText" cols="30" rows="10" placeholder="Enter you message"></textarea> <br>
+        <input type="text" class="scrambleText" placeholder="Enter the words to redact, separated by space">
+        <br>
+      </div>
+      <h4> Select the symbol for hiding your content </h4>
+      <input type="checkbox" name="" id="check1" class="check" value="*" onclick="return ValidateSelection();">*
+      <input type="checkbox" name="" id="check2" class="check" value="#" onclick="return ValidateSelection();">#
+      <input type="checkbox" name="" id="check3" class="check" value="%" onclick="return ValidateSelection();">%
+      <br>
+      <button type="submit" class="btn button-btn"> Redactr</button>
+    </form>
+    <div class="results">
+      <p class="para">change this text</p>
+      <h3>Stats</h3>
+      <div class="stats">
+        <div class="stats-card">
+          <p class="stat">Scanned</p>
+          <p class="totalWords">94</p>
+        </div>
+        <div class="stats-card">
+          <p class="stat">Match</p>
+          <p class="totalWords">4</p>
+        </div>
+        <div class="stats-card">
+          <p class="stat">Time</p>
+          <p class="totalWords">3.2ms</p>
+        </div>
+      </div>
+    </div>
   </div>
   <!-- // ============= EEND DO NOT EDIT ============== // -->
   <script src="index.mjs" type="module"></script>
