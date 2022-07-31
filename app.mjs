@@ -42,7 +42,7 @@ function startApp() {
   }
 
   btn.addEventListener('click', () => {
-
+    event.preventDefault()
     var performance = window.performance;
     var t0 = performance.now();
 
