@@ -51,13 +51,13 @@ function startApp() {
     let stArr = ST.split(' ') //stArr = scramble text array
     let mtArr = MT.split(' ')
 
-
+// code to get number of words scrambled
     console.log(mtArr.length)
     console.log(MT)
     console.log(stArr)
     console.log(MT.length)
 
-
+// code to get length of characters scanned
     let strLength = stArr.join('')
     console.log(strLength)
     console.log(strLength.length)
@@ -88,7 +88,7 @@ function startApp() {
     paragragh.innerHTML = MT
 
     var t1 = performance.now();
-    console.log("Call to doWork took " + (t1 - t0) + " milliseconds.")
+    console.log("Your Words was scrambled in  " + (t1 - t0) + " milliseconds.")
 
   })
 }
