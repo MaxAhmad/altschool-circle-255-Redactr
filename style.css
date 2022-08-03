@@ -91,4 +91,9 @@ h1 {
 .totalWords {
   font-size: 1.2em;;
   font-style: bold;
+  align-text: center;
+}
+
+.totalMatch {
+  align-text: center;
 }
