@@ -2,7 +2,7 @@ function startApp() {
   // Your entire app should not necessarily be coded inside this 
   // single function (though there's no penalty for that), 
   // so create and use/call additional functions from here
-
+ 
   // pls remove the below and make some magic in here!
   //   console.log('make magic in here!');
 
@@ -19,6 +19,12 @@ function startApp() {
   let check2 = document.querySelector('#check2')
   let check3 = document.querySelector('#check3')
   let symbol
+  
+  let wordCount = document.querySelector('.totalWords')
+  let wordMatch = document.querySelector('.totalMatch')
+  let timeRun = document.querySelector('.totalTime')
+  
+
 
   // let ST = inputValue.value
   // let MT = inputText.value
@@ -56,11 +62,17 @@ function startApp() {
     console.log(MT)
     console.log(stArr)
     console.log(MT.length)
+    
+    wordCount.innerHTML = mtArr.length 
 
 // code to get length of characters scanned
     let strLength = stArr.join('')
     console.log(strLength)
     console.log(strLength.length)
+
+    wordMatch.innerHTML = strLength.length
+
+    
 
     if (check1.checked == true) {
       symbol = document.getElementById("check1").value.trim()
@@ -89,6 +101,12 @@ function startApp() {
 
     var t1 = performance.now();
     console.log("Your Words was scrambled in  " + (t1 - t0) + " milliseconds.")
+
+    var time = t1-t0;
+    time = +time.toFixed(2);
+    
+    timeRun.innerHTML = time + ' ms'
+    
 
   })
 }
