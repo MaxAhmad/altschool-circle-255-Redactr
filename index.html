@@ -20,9 +20,9 @@
         <br>
       </div>
       <h4> Select the symbol for hiding your content </h4>
-      <input type="checkbox" name="" id="check1" class="check" value="*" onclick="return ValidateSelection();">*
-      <input type="checkbox" name="" id="check2" class="check" value="#" onclick="return ValidateSelection();">#
-      <input type="checkbox" name="" id="check3" class="check" value="%" onclick="return ValidateSelection();">%
+      <input type="radio" name="sym" id="check1" class="check" value="*" onclick="return ValidateSelection();">*
+      <input type="radio" name="sym" id="check2" class="check" value="#" onclick="return ValidateSelection();">#
+      <input type="radio" name="sym" id="check3" class="check" value="%" onclick="return ValidateSelection();">%
       <br>
       <button type="submit" class="btn button-btn"> Redact now</button>
     </form>
@@ -31,11 +31,11 @@
       <h3>Stats</h3>
       <div class="stats">
         <div class="stats-card">
-          <p class="stat">Scanned</p>
+          <p class="stat">Words Scanned</p>
           <p class="totalWords">0</p>
         </div>
         <div class="stats-card">
-          <p class="stat">Characters</p>
+          <p class="stat">Characters scrambled</p>
           <p class="totalMatch">0</p>
         </div>
         <div class="stats-card">
