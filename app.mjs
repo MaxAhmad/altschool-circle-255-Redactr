@@ -68,7 +68,6 @@ function startApp() {
     // codde to display scrambled words with text
      paragragh.innerHTML = MT
     paragragh.style.display ='block'
-    inputText.value = ' ';
 
     // code to get ending time of execution
     var t1 = performance.now();
