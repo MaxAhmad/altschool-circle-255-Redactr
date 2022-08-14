@@ -4,6 +4,10 @@
     --width: 500px;
 }
 
+*{
+  box-sizing: border-box;
+}
+
 .stats p {
   line-height: 1 em;
 }
@@ -11,8 +15,13 @@
 .container {
     width: 800px;
     max-width: 100%;
-    margin: 0 auto;
+    margin: auto;
     min-height: 200px
+}
+
+.mainText{
+  border-radius: 10px;
+  outline: none;
 }
 
 .form {
@@ -46,7 +55,7 @@
   text-transform: uppercase;
   font-size: 1.1em;
   font-style: bold;
-
+  margin-top: 10px;
 }
 
 .button-btn:hover {
@@ -55,7 +64,7 @@
   transition: .5s
 }
 
-h1 {
+.container h1 {
   text-align: center;
   font-size: 3em;
 }
@@ -76,7 +85,7 @@ h1 {
 
 .stat {
   text-transform: uppercase;
-  color: #d1d1d1
+  
 }
 
 .stats-card {
@@ -89,11 +98,131 @@ h1 {
 }
 
 .totalWords {
-  font-size: 1.2em;;
   font-style: bold;
   text-align: center;
 }
 
-.totalMatch {
+.stats {
   text-align: center;
+  padding: 30px 0;
+}
+
+.totalTime{
+  padding-top: 15px
+}
+
+footer{
+  text-align: center;
+  background-color: #e9e8e8;
+  padding: 20px 0;
+  font-size: 20px;
+}
+
+.displaysection{
+    background-color: aqua;
+    height: inherit;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 10px;
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: 30% 70%;
+  background-color: #e9e8e8;
+}
+
+.about-app, .footer-part{
+  padding: 25px;
+  background-color: rgb(96, 162, 189);
+  height: 100%;
+  font-size: 20px;
+}
+
+.about-app h1{
+  font-family: 'Give You Glory', cursive;
+  font-family: 'Finger Paint', cursive;
+  /* font-family: 'Over the Rainbow', cursive; */
+  font-size: 50px;
+}
+
+.about-app h2 span{
+  font-size: 18px;
+}
+
+.about-app h3{
+  padding-top: 95px;
+}
+
+
+
+/* Media Query for mobile mode */
+@media(min-width: 360px) and (max-width: 480px) {
+      .grid-container{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .about-app h3{
+      padding-top: 30px;
+    }
+
+    .about-app h1{
+      text-align: center;
+      font-size: 50px;
+    }
+
+    .container{
+      margin: 30px 0;
+      width: 100%;
+    }
+
+    .form{
+      width: 90%;
+      margin: auto;
+    }
+
+    .stats{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .stats-card{
+      margin: 15px 0;
+      width: 150px;
+    }
+
+    .footer-part{
+      display: none;
+    }
+
+}
+   
+          
+  /* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px){
+    .grid-container{
+       display: grid;
+       grid-template-columns: 40% 60%;
+       background-color: #e9e8e8;
+    }
+            
+    .stats{
+       display: flex;
+       flex-direction: row;
+       justify-content: space-around;
+    }
+
+    .stats-card{
+       margin: 0 10px;  
+    }
+
+    .stats-card:nth-child(3){
+       width: 100px;
+       padding: 0 30px;
+    }
 }

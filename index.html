@@ -11,41 +11,72 @@
 </head>
 
 <body>
-  <div class="container">
-    <h1>Redactr</h1>
-    <form class="form">
-      <div class="form-group">
-        <textarea name="" id="" class="mainText" cols="30" rows="10" placeholder="Enter your message"></textarea> <br>
-        <input type="text" class="scrambleText" placeholder="Enter the words to redact, separated by space">
-        <br>
-      </div>
-      <h4> Select the symbol for hiding your content </h4>
-      <input type="radio" name="sym" id="check1" class="check" value="*">*
-      <input type="radio" name="sym" id="check2" class="check" value="#">#
-      <input type="radio" name="sym" id="check3" class="check" value="%">%
-      <br>
-      <button type="submit" class="btn button-btn"> Redact now</button>
-    </form>
-    <div class="results">
-      <p class="para">Redacted text goes here!</p>
-      <h3>Stats</h3>
-      <div class="stats">
-        <div class="stats-card">
-          <p class="stat">Words Scanned</p>
-          <p class="totalWords">0</p>
+  <div class="grid-container">
+        <div class="about-app">
+          <h1>
+            REDACTR
+          </h1>
+          <h2>
+            <span>🔗</span>  Scramble your word with ease
+          </h2>
+          <p>
+            This app helps you safely scramble portions of text you don’t want the world to read/see.
+          </p>
+          <h3>
+            <span>🔗</span> Scramble your text in few a steps
+          </h3>
+          <ol>
+            <li>write or paste your senctence containing your scrambled words in the message field</li>
+            <li>write your word(s) you want to be scrambled seperated by space in the field provided</li>
+            <li>choose your symbol you want to use to scramble your word</li>
+            <li>click the Redactr now button to scrambled your word</li>
+            <li>that's it, your scrambled text will appear in a gify 👍</li>
+          </ol>
         </div>
-        <div class="stats-card">
-          <p class="stat">Characters scrambled</p>
-          <p class="totalMatch">0</p>
+        <div class="container">
+          <!-- <h1>Redactr</h1> -->
+          <form class="form">
+            <div class="form-group">
+              <textarea name="" id="" class="mainText" cols="30" rows="10" placeholder="Enter your message"></textarea> <br>
+              <input type="text" class="scrambleText" placeholder="Enter the words to redact, separated by space">
+              <br>
+            </div>
+            <h4> Select the symbol for hiding your content </h4>
+            <input type="radio" name="sym" id="check1" class="check" value="*">*
+            <input type="radio" name="sym" id="check2" class="check" value="#">#
+            <input type="radio" name="sym" id="check3" class="check" value="%">%
+            <br>
+            <button type="submit" class="btn button-btn"> Redact now</button>
+          </form>
+          <div class="results">
+              <div class="displaysection">
+                  <p class="para"> Your Redacted text goes here!</p>
+    
+              </div>
+            <div class="stats">
+              <div class="stats-card">
+                <p class="stat">Words Scanned</p>
+                <p class="totalWords">0</p>
+              </div>
+              <div class="stats-card">
+                <p class="stat">Characters scrambled</p>
+                <p class="totalMatch">0</p>
+              </div>
+              <div class="stats-card">
+                <p class="stat">Time</p>
+                <p class="totalTime">0</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="stats-card">
-          <p class="stat">Time</p>
-          <p class="totalTime">0</p>
+        <div class="footer-part">
+    
         </div>
-      </div>
-    </div>
-  </div>
-  <!-- // ============= EEND DO NOT EDIT ============== // -->
+        <footer>
+          © Circle-255
+        </footer>
+    
+      </div>  <!-- // ============= EEND DO NOT EDIT ============== // -->
   <script src="index.mjs" type="module"></script>
   <!-- // ============= EEND DO NOT EDIT ============== // -->
 </body>

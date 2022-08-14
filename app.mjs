@@ -12,56 +12,51 @@ function startApp() {
   //   }
   // };
 
+  // Selecting elements
   let inputValue = document.querySelector('.scrambleText')
   let inputText = document.querySelector('.mainText')
-  let paragragh = document.querySelector('.para')
-  let check1 = document.querySelector('#check1')
-  let check2 = document.querySelector('#check2')
-  let check3 = document.querySelector('#check3')
-  let symbol
-  
+  let paragragh = document.querySelector('.displaysection')
+
   let wordCount = document.querySelector('.totalWords')
   let wordMatch = document.querySelector('.totalMatch')
   let timeRun = document.querySelector('.totalTime')
 
+  let check1 = document.querySelector('#check1')
+  let check2 = document.querySelector('#check2')
+  let check3 = document.querySelector('#check3')
+
+  // Declaring variables
+  let symbol, ST, MT, mtArr, stArr,strLength
+
+   paragragh.style.display = 'none'
+  
   const btn = document.querySelector('.btn')
 
   btn.addEventListener('click', () => {
-    event.preventDefault()
+     event.preventDefault()
+
+    // code to get starting time of execution
     var performance = window.performance;
     var t0 = performance.now();
 
-    let ST = inputValue.value //ST = scramble text
-    let MT = inputText.value //MT = main text
+    // code to get value of selected radio button
+    check1.checked == true ? symbol = check1.value : 
+    check2.checked == true ? symbol = check2.value : 
+    check3.checked == true ? symbol = check3.value : 
+    alert('You have not slected a symbol')
+
+    ST = inputValue.value.toLowerCase() //ST = scramble text
+    MT = inputText.value.toLowerCase() //MT = main text
    
 // code to get number of words scrambled
-    let mtArr = MT.split(' ')
+    mtArr = MT.split(' ')
     wordCount.innerHTML = mtArr.length 
 
 // code to get length of characters scanned
-     let stArr = ST.split(' ') //stArr = scramble text array
-    let strLength = stArr.join('')
+     stArr = ST.split(' ') //stArr = scramble text array
+     strLength = stArr.join('')
     wordMatch.innerHTML = strLength.length
-
     
-    // code to get value of selected radio button
-    if (check1.checked == true) {
-      symbol = document.getElementById("check1").value.trim()
-      console.log(symbol)
-    }
-    else if (check2.checked == true) {
-      symbol = document.getElementById("check2").value.trim()
-      console.log(symbol)
-    }
-    else if (check3.checked == true) {
-      symbol = document.getElementById("check3").value.trim()
-      console.log(symbol)
-      console.log(typeof symbol)
-    }
-    else {
-      alert("You have not selected anything")
-    }
-
     // code to scramble words selected
     for (let i = 0; i < stArr.length; i++) {
       while (MT.includes(stArr[i])) {
@@ -71,8 +66,11 @@ function startApp() {
     }
 
     // codde to display scrambled words with text
-    paragragh.innerHTML = MT
+     paragragh.innerHTML = MT
+    paragragh.style.display ='block'
+    inputText.value = ' ';
 
+    // code to get ending time of execution
     var t1 = performance.now();
 
     var time = t1-t0;
