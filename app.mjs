@@ -40,10 +40,9 @@ function startApp() {
     var t0 = performance.now();
 
     // code to get value of selected radio button
-    check1.checked == true ? symbol = check1.value : 
-    check2.checked == true ? symbol = check2.value : 
-    check3.checked == true ? symbol = check3.value : 
-    alert('You have not slected a symbol')
+    check1.checked == true ? symbol = check1.value : check2.checked == true ?
+     symbol = check2.value : check3.checked == true ? symbol = check3.value : 
+     alert('You have not slected a symbol')
 
     ST = inputValue.value.toLowerCase() //ST = scramble text
     MT = inputText.value.toLowerCase() //MT = main text
@@ -56,26 +55,29 @@ function startApp() {
      stArr = ST.split(' ') //stArr = scramble text array
      strLength = stArr.join('')
     wordMatch.innerHTML = strLength.length
-    
-    // code to scramble words selected
-    for (let i = 0; i < stArr.length; i++) {
-      while (MT.includes(stArr[i])) {
-        MT = MT.replace(stArr[i],
-          symbol.repeat(stArr[i].length))
+
+    if(inputValue.value && inputText.value){
+      for (let i = 0; i < stArr.length; i++) {
+        while (MT.includes(stArr[i])) {
+          MT = MT.replace(stArr[i],
+            symbol.repeat(stArr[i].length))
+        }
       }
+      paragragh.innerHTML = MT
+      paragragh.style.display ='block'
+      
+      var t1 = performance.now();
+      // code to calculate ending time of execution
+      var time = t1-t0;
+      time = +time.toFixed(2);
+      
+      timeRun.innerHTML = time + ' ms'
+    }else{
+      alert(`Please fill out the required field`)
+      wordMatch.innerHTML = 0
+      wordCount.innerHTML = 0
+      timeRun.innerHTML = 0
     }
-
-    // codde to display scrambled words with text
-     paragragh.innerHTML = MT
-    paragragh.style.display ='block'
-
-    // code to get ending time of execution
-    var t1 = performance.now();
-
-    var time = t1-t0;
-    time = +time.toFixed(2);
-    
-    timeRun.innerHTML = time + ' ms'
   })
 }
 
