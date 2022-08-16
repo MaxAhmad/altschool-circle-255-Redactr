@@ -32,8 +32,8 @@ function startApp() {
   
   const btn = document.querySelector('.btn')
 
-  btn.addEventListener('click', () => {
-     event.preventDefault()
+  btn.addEventListener('click', (e) => {
+     e.preventDefault()
 
     // code to get starting time of execution
     var performance = window.performance;
